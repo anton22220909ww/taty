@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тату Салон | Мастера</title>
+    <style>
+        body {
+           
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap; /* Разрешает перенос на новую строку */
+            justify-content: space-around;
+            padding: 20px;
+            flex: 1;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        /* Обновленные стили для фона подложки мастеров с изображением и размещения по три на строку */
+.masters ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Это свойство позволяет элементам переноситься на новую строку при нехватке места */
+    justify-content: space-around;
+}
+
+.masters li {
+    width: calc(33.33% - 20px); /* Рассчитываем ширину каждого мастера с учетом отступов между ними */
+    text-align: center;
+    margin-bottom: 20px;
+    background: url('image/your_background_image.jpg') center/cover no-repeat; /* Замените 'your_background_image.jpg' на путь к вашей картинке */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #333;
+    box-sizing: border-box; /* Это свойство включает учет полей и границ в расчет ширины элемента */
+}
+
+        .booking form {
+            margin-top: 20px;
+        }
+
+        .additional-image {
+            background: url(image/image1.1.jpg) center/cover no-repeat; /* Замените 'your_additional_image.jpg' на путь к вашему изображению */
+            flex: 0 1 calc(45% - 20px); /* Регулирует ширину блока с изображением */
+            height: 300px; /* Регулирует высоту блока с изображением */
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin-top: auto;
+        }
+
+        header button,
+        input[type="submit"] {
+            text-decoration: none;
+            color: white;
+            background-color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <button onclick="window.location.href='index.html'">Главная</button>
+            <button onclick="window.location.href='masters.html'">Мастера</button>
+            <button onclick="window.location.href='tattoos.html'">Татуировки</button>
+            <button onclick="window.location.href='contact.html'">Запись на прием</button>
+        </nav>
+    </header>
+    <main>
+        <section class="masters">
+            <h2>Наши мастера</h2>
+            <ul>
+                <li>
+                    <img src="image/master1.jpg" alt="Master 1" style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
+                    <h3>Мастер 1</h3>
+                    <p>Специализация: Трибаль, Японский стиль </p>
+                    <form>
+                        <label for="name">Имя: Юрий Волков </label>
+                        <br><br>
+                        <label for="phone">Рабочий Телефон:89999999999</label>
+                        <br><br>
+                        <label for="email">Пару слов от мастера </label>
+                        <h4>"С появлением тату изменяются взгляды окружающих. <br>Вместе с этим меняется восприятие мира"</h4>
+
+                        
+                    </form>
+                </li>
+                <li>
+                    <img src="image/master10.jpg" alt="Master 2" style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
+                    <h3>Мастер 2</h3>
+                    <p>Специализация: Реалистичный стиль</p>
+                    <form>
+                        <label for="name">Имя: Стела </label>
+                        <br><br>
+                        <label for="phone">Телефон:89999999999</label>
+                        <br><br>
+                        <label for="email">Пару слов от мастера </label>
+                        <h4>"Не важно есть у тебя татуировки на теле или нет, <br>главное - всегда быть человеком"</h4>
+
+                        
+                    </form>
+                </li>
+                <li>
+                    <img src="image/master2.jpg" alt="Master 2" style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
+                    <h3>Мастер 3</h3>
+                    <p>Специализация: Реалистичный стиль</p>
+                    <form>
+                        <label for="name">Имя: Александра </label>
+                        <br><br>
+                        <label for="phone">Телефон:89999999999</label>
+                        <br><br>
+                        <label for="email">Пару слов от мастера </label>
+                        <h4>"Не важно есть у тебя татуировки на теле или нет, <br>главное - всегда быть человеком"</h4>
+
+                        
+                    </form>
+                </li>
+                <li>
+                    <img src="image/master7.jpg" alt="Master 2" style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
+                    <h3>Мастер 4</h3>
+                    <p>Специализация: Реалистичный стиль</p>
+                    <form>
+                        <label for="name">Имя: Стела </label>
+                        <br><br>
+                        <label for="phone">Телефон:89999999999</label>
+                        <br><br>
+                        <label for="email">Пару слов от мастера </label>
+                        <h4>"Не важно есть у тебя татуировки на теле или нет, <br>главное - всегда быть человеком"</h4>
+
+                        
+                    </form>
+                </li>
+                <li>
+                    <img src="image/master3.jpg" alt="Master 1" style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
+                    <h3>Мастер 5</h3>
+                    <p>Специализация: Графика</p>
+                    <form>
+                        <label for="name">Имя: Василий Немов </label>
+                        <br><br>
+                        <label for="phone">Телефон:89999999999</label>
+                        <br><br>
+                        <label for="email">Пару слов от мастера</label>
+                        <h4>"Люди до сих пор думают, что у всех татуировок есть смысл <br>и что их стоимость считают пачками сигарет"</h4>
+                        
+
+                        
+                    </form>
+                </li>
+                <li>
+                    <img src="image/master4.jpg" alt="Master 1" style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
+                    <h3>Мастер 6</h3>
+                    <p>Специализация: Oldschool </p>
+                    <form>
+                        <label for="name">Имя: Юлия </label>
+                        <br><br>
+
+                        <label for="phone">Телефон:89999999999</label>
+                        <br><br>
+
+                        <label for="email">Пару слов от мастера </label>
+                       <h4>Стать счастливым...для меня это значит<br> найти любовь...татуированную,конечно.</h4>
+
+                       
+                    </form>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <p>&copy; 2023 Тату Салон</p>
+        </div>
+        <div>
+            <p>Адрес: г. Астрахань, ул. Джона Рида , д. 12 г</p>
+        </div>
+        <div>
+            <p>Телефон: +7 (123) 456-7890</p>
+        </div>
+        <div>
+            <p>Email: info@tattoo-salon.ru</p>
+        </div>
+    </footer>
+</body>
+</html>
