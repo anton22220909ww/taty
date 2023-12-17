@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тату Салон | Татуировки</title>
+    <style>
+        body {
+            background: url(image/image2.jpg) center/cover no-repeat; /* Замените 'your_background_image.jpg' на путь к вашему изображению */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+            flex: 1;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .tattoos ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .tattoos li {
+            text-align: center;
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header button {
+            text-decoration: none;
+            color: white;
+            background-color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin-top: auto;
+        }
+
+        button {
+            background-color: #333;
+            color: rgb(170, 170, 170);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .collage {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* Отображение 5 картинок в строке */
+            gap: 10px;
+        }
+
+        .collage img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <button onclick="window.location.href='index.html'">Главная</button>
+            <button onclick="window.location.href='masters.html'">Мастера</button>
+            <button onclick="window.location.href='tattoos.html'">Татуировки</button>
+            <button onclick="window.location.href='contact.html'">Запись на прием</button>
+        </nav>
+    </header>
+    <main>
+        <section class="tattoos">
+            <h2>Работы наших мастеров </h2>
+            <ul>
+                <li>
+                    <img src="image/tattoo1.jpg" alt="Tattoo 1" style="border-radius: 10px; width: 200px; height: 200px; object-fit: cover;">
+                    <h3 style="color: #333;">Татуировка 1</h3>
+                    <p style="color: #555;">Стиль: Японский </p>
+                    <p style="color: #555;">Выполнил : Юрий Волков</p>
+                    <button style="background-color: #555; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Добавить в избранное</button>
+                </li>
+                <li>
+                    <img src="image/tattoo2.jpg" alt="Tattoo 2" style="border-radius: 10px; width: 200px; height: 200px; object-fit: cover;">
+                    <h3 style="color: #333;">Татуировка 2</h3>
+                    <p style="color: #555;">Стиль: Скетч</p>
+                    <p style="color: #555;">Выполнила : Юлия </p>
+                    <button style="background-color: #555; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Добавить в избранное</button>
+                </li>
+                <li>
+                    <img src="image/tattoo3.jpg" alt="Tattoo 2" style="border-radius: 10px; width: 200px; height: 200px; object-fit: cover;">
+                    <h3 style="color: #333;">Татуировка 3</h3>
+                    <p style="color: #555;">Стиль: Реализм</p>
+                    <p style="color: #555;">Выполнила : Стела</p>
+                    <button style="background-color: #555; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Добавить в избранное</button>
+                </li>
+                <li>
+                    <img src="image/tattoo4.jpg" alt="Tattoo 2" style="border-radius: 10px; width: 200px; height: 200px; object-fit: cover;">
+                    <h3 style="color: #333;">Татуировка 4</h3>
+                    <p style="color: #555;">Стиль: Графика </p>
+                    <p style="color: #555;">Выполнил : Василий Немов</p>
+                    <button style="background-color: #555; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Добавить в избранное</button>
+                </li>
+                <li>
+                    <img src="image/tattoo5.jpg" alt="Tattoo 2" style="border-radius: 10px; width: 200px; height: 200px; object-fit: cover;">
+                    <h3 style="color: #333;">Татуировка 5</h3>
+                    <p style="color: #555;">Стиль: Реализм</p>
+                    <p style="color: #555;">Выполнил : Стела</p>
+                    <button style="background-color: #555; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Добавить в избранное</button>
+                </li>
+               
+
+            </ul>
+        </section>
+        <main>
+            <section class="tattoos">
+                <h2>Наше портфолио</h2>
+             
+                <h3>P.s - "Все клиенты остались довльны" </h3>
+                <div class="collage">
+                    <img src="image/tattoo1.1.jpg" alt="Tattoo 1">
+                    <img src="image/tattoo2.1.jpg" alt="Tattoo 2">
+                    <img src="image/tattoo3.1.jpg" alt="Tattoo 3">
+                    <img src="image/tattoo4.1.jpg" alt="Tattoo 4">
+                    <img src="image/tattoo5.1.jpg" alt="Tattoo 5">
+                    <img src="image/tattoo6.1.jpg" alt="Tattoo 6">
+                    <img src="image/tattoo7.1.jpg" alt="Tattoo 7">
+                    <img src="image/tattoo8.1.jpg" alt="Tattoo 8">
+                    <img src="image/tattoo9.1.jpg" alt="Tattoo 9">
+                    <img src="image/tattoo10.1.jpg" alt="Tattoo 10">
+                    <img src="image/tattoo11.1.jpg" alt="Tattoo 11">
+                    <img src="image/tattoo12.1.jpg" alt="Tattoo 12">
+                    <img src="image/tattoo13.1.jpg" alt="Tattoo 13">
+                    <img src="image/tattoo14.1.jpg" alt="Tattoo 14">
+                    <img src="image/tattoo15.1.jpg" alt="Tattoo 15">
+
+                    <!-- Добавьте дополнительные изображения по необходимости -->
+                </div>
+            </section>
+        </main>
+    </main>
+    
+    <!-- Подвал -->
+    <footer>
+        <div>
+            <p>&copy; 2023 Тату Салон</p>
+        </div>
+        <div>
+            <p>Адрес: г. Астрахань, ул. Джона Рида , д. 12 г</p>
+        </div>
+        <div>
+            <p>Телефон: +7 (123) 456-7890</p>
+        </div>
+        <div>
+            <p>Email: info@tattoo-salon.ru</p>
+        </div>
+    </footer>
+</body>
+</html>
