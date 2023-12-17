@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тату Салон | Главная</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('image/your_image_path.jpg') center/cover no-repeat;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Это обеспечивает, чтобы контент занимал минимум 100% высоты видимой области */
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+            flex: 1;
+        }
+
+        h1 {
+            color: #ffffff;
+            margin: 0;
+            font-size: 4em;
+
+        }
+
+        h2{
+            color: #ffffff;
+            margin: 0;
+            font-size: 2em;
+        }
+        .hero {
+            background-color: transparent;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin-top: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+
+        footer div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        header button,
+        input[type="submit"] {
+            text-decoration: none;
+            color: white;
+            background-color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .close {
+            color: rgb(255, 255, 255);
+            font-size: 50px;
+           
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        table {
+    width: 70%; /* Измените ширину по вашему желанию */
+    margin: 0 auto; /* Центрируем таблицу по горизонтали */
+    border-collapse: collapse;
+    margin-top: 20px;
+        }
+        .advantages {
+            background-color: #33333300;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px; /* Добавленный отступ вниз */
+            border-radius: 10px;
+           
+        }
+
+        .advantage {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .advantage i {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #ffffff; /* Золотой цвет для иконок */
+        }
+
+        .advantage h3 {
+            color: #ffffff; /* Золотой цвет для заголовков */
+        }
+
+        .advantage p {
+            color: #ddd;
+         } /* Серый цвет для текста */
+th, td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+    color: white; /* Добавленный стиль для цвета текста */
+}
+        body.modal-open {
+            overflow: hidden;
+        }
+        .about-us {
+          
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 20px; /* Добавленный отступ вверх */
+        }
+        
+
+        /* Добавленные стили для текста "О нас" */
+        .about-us p {
+            line-height: 1.5; /* Межстрочный интервал для лучшей читаемости */
+            max-width: 800px; /* Максимальная ширина текста "О нас" */
+            margin: 0 auto; /* Центрирование текста "О нас" */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <button onclick="window.location.href='index.html'">Главная</button>
+            <button onclick="window.location.href='masters.html'">Мастера</button>
+            <button onclick="window.location.href='tattoos.html'">Татуировки</button>
+            <button onclick="window.location.href='contact.html'">Запись на прием</button>
+            <button onclick="openModal()">Войти</button>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h1>Тату Салон</h1>
+            <br>
+            <h2>"Студия 13"</h2>
+            <p style="color: white;">Всегда хорошо встречают и профессионально работают</p>
+            <button onclick="window.location.href='contact.html'">Записаться на прием</button>
+        </section>
+        <section class="about-us">
+            <h2>Тату салон "Студия 13"</h2>
+            <p>
+                Студия 13 – это профессиональный Астраханский тату салон. В первую очередь татуировка для нас – это искусство.
+                Мы не похожи на студии-офисы или медицинские кабинеты: у нас уютно, просторно, можно выпить кофе,
+                пообщаться с открытыми творческими людьми.
+            </p>
+            <p>
+                Профессиональные и опытные мастера студии работают во всех возможных стилях: реализм, дотворк, акварель,
+                нео традишнл, японский стиль, традиционная татуировка, лайнворк и другие.
+            </p>
+            <p>
+                Также наши мастера могут оказать услуги: перманентный макияж и пирсинг.
+            </p>
+        </section>
+        <section class="prices-services">
+            <h2>Цены и Услуги</h2>
+            <table>
+                <tr>
+                    <th>Услуга</th>
+                    <th>Описание</th>
+                    <th>Цена</th>
+                </tr>
+                <tr>
+                    <td>Трибальная татуировка</td>
+                    <td>Стильная трибальная татуировка с уникальным дизайном.</td>
+                    <td>$150</td>
+                </tr>
+                <tr>
+                    <td>Реалистичная татуировка</td>
+                    <td>Татуировка, воссоздающая реальные изображения с высокой детализацией.</td>
+                    <td>$200</td>
+                </tr>
+                <tr>
+                    <td>Японский стиль</td>
+                    <td>Традиционные японские мотивы в татуировке.</td>
+                    <td>$180</td>
+                </tr>
+                <!-- Добавьте другие услуги по аналогии -->
+            </table>
+        </section>
+        <section class="advantages">
+            <h2>Наши преимущества</h2>
+            <div class="advantage">
+                <i class="fas fa-user-shield"></i>
+                <h3>Профессиональные мастера</h3><br>
+                <p>Наши мастера обладают высоким профессионализмом и опытом в татуировке.</p>
+            </div>
+            <div class="advantage">
+                <i class="fas fa-hands"></i>
+                <h3>Индивидуальный подход</h3>
+                <p>Мы ценим каждого клиента и предоставляем индивидуальный подход к выполнению татуировки.</p>
+            </div>
+            <div class="advantage">
+                <i class="fas fa-palette"></i>
+                <h3>Широкий выбор стилей</h3>
+                <p>У нас представлен широкий выбор стилей татуировок, чтобы удовлетворить любой вкус.</p>
+            </div>
+        </section>
+        
+     
+    </main>
+    <footer>
+        <div>
+            <p>&copy; 2023 Тату Салон</p>
+        </div>
+        <div>
+            <p>Адрес: г. Астрахань, ул. Джона Рида , д. 12 г</p>
+        </div>
+        <div>
+            <p>Телефон: +7 (123) 456-7890</p>
+        </div>
+        <div>
+            <p>Email: info@tattoo-salon.ru</p>
+        </div>
+    </footer>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Вход в систему</h2>
+            <form id="loginForm">
+                <label for="username">Имя пользователя:</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+
+                <input type="submit" value="Войти" style="background-color: #333; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+            </form>
+        </div>
+    </div>
+    <script>
+        function openModal() {
+            document.getElementById("myModal").style.display = "flex";
+            document.body.classList.add("modal-open");
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+            document.body.classList.remove("modal-open");
+        }
+
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            fetch("login.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                body: "username=" + encodeURIComponent(username) + "&password=" + encodeURIComponent(password)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                if (data.success) {
+                    alert("Авторизация прошла успешно");
+                    closeModal();
+                  
+                } else {
+                    alert("Ошибка авторизации. Пожалуйста, проверьте имя пользователя и пароль.");
+                }
+            })
+            .catch(error => {
+                console.error("Ошибка при отправке запроса:", error);
+            });
+        });
+    </script>
+</body>
+</html>
