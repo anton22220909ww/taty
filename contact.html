@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тату Салон | Запись на прием</title>
+    <style>
+        body {
+            background: url(image/image1.jpg) center/cover no-repeat; /* Замените 'your_background_image.jpg' на путь к вашему изображению */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+            flex: 1;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .booking form {
+            text-align: left;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .booking label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .booking input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .booking input[type="submit"] {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin-top: auto;
+        }
+
+        header button,
+        input[type="submit"] {
+            text-decoration: none;
+            color: white;
+            background-color: #333;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <button onclick="window.location.href='index.html'">Главная</button>
+            <button onclick="window.location.href='masters.html'">Мастера</button>
+            <button onclick="window.location.href='tattoos.html'">Татуировки</button>
+            <button onclick="window.location.href='contact.html'">Запись на прием</button>
+        </nav>
+    </header>
+    <main>
+        <section class="booking">
+            <h2>Запись на прием</h2>
+            <div id="successMessage" style="display: none; background-color: #4CAF50; color: white; padding: 10px; margin-bottom: 20px;">Запись на прием прошла успешно! Подтверждение отправлено на вашу почту.</div>
+
+            <form id="bookingForm" action="process_booking.php" method="post">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="email">Электронная почта:</label>
+                <input type="email" id="email" name="email" required>
+
+                <input type="submit" value="Записаться" style="background-color: #333; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+            </form>
+        </section>
+    </main>
+    
+    <!-- Подвал -->
+    <footer>
+        <div>
+            <p>&copy; 2023 Тату Салон</p>
+        </div>
+        <div>
+            <p>Адрес: г. Астрахань, ул. Джона Рида , д. 12 г</p>
+        </div>
+        <div>
+            <p>Телефон: +7 (123) 456-7890</p>
+        </div>
+        <div>
+            <p>Email: info@tattoo-salon.ru</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("bookingForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Отправка формы через fetch
+            fetch("process_booking.php", {
+                method: "POST",
+                body: new FormData(this)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert(data.message); // Выводим визуальное сообщение
+                } else {
+                    alert("Ошибка при отправке формы");
+                }
+            })
+            .catch(error => {
+                console.error("Ошибка при отправке запроса:", error);
+            });
+        });
+    </script>
+</body>
+</html>
